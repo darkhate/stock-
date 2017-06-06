@@ -6,7 +6,7 @@ from django.utils import timezone
 
 # Create your views here.
 def hello_world(request):
-      return render(request,"hello_World.html",{
+      return render(request,"index.html",{
       'current_time': str(timezone.localtime(timezone.now())),})
 
 def hello_world2(request):

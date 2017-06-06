@@ -16,8 +16,12 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from Ugo.views import hello_world
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^helloo/$', hello_world),
-]
+  
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
